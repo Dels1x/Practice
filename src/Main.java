@@ -1,18 +1,21 @@
+import java.util.Locale;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Tesseract tesseract = new Tesseract(75, 90, 30, 60);
-        Square square = new Square(75, 90);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println(tesseract.getArea());
-        System.out.println(square.getArea());
+        System.out.println("What shape you want to be drawn?");
+        String desiredShape = scanner.nextLine();
+        Shape shape;
 
-        Square tesseract1 = new Tesseract(75, 90, 30, 60.3);
+        if(desiredShape.toLowerCase(Locale.ROOT).equals("triangle")) {
+            shape = new Triangle();
+        }
+        else {
+            shape = new Square(50, 50);
+        }
 
-        System.out.println(tesseract1.getArea());
-
-        Shape circle = new Circle();
-
-        circle.draw();
-
+        shape.draw();
     }
 }

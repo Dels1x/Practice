@@ -14,4 +14,12 @@ public class Square extends Shape{
     double getArea() {
         return this.a * this.b;
     }
+
+    void draw() {
+        System.out.println("Square was drawn!");
+    }
+
+    void erase() {
+        System.out.println("Square was erased!");
+    }
 }
