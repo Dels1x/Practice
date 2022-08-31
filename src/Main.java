@@ -5,5 +5,14 @@ public class Main {
 
         System.out.println(tesseract.getArea());
         System.out.println(square.getArea());
+
+        Square tesseract1 = new Tesseract(75, 90, 30, 60.3);
+
+        System.out.println(tesseract1.getArea());
+
+        Shape circle = new Circle();
+
+        circle.draw();
+
     }
 }

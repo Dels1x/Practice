@@ -1,15 +1,15 @@
 public class Cube extends Square {
-    int c;
-    Cube(int a, int b, int c) {
+    double c;
+    Cube(double a, double b, double c) {
         super(a, b);
         this.c = c;
     }
 
-    int getPerimeter() {
+    double getPerimeter() {
         return this.a + this.b + this.c;
     }
 
-    int getArea() {
+    double getArea() {
         return this.a * this.b * this.c;
     }
 }

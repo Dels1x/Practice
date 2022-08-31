@@ -1,17 +1,17 @@
-public class Square {
-    int a;
-    int b;
+public class Square extends Shape{
+    double a;
+    double b;
 
-    Square(int a, int b) {
+    Square(double a, double b) {
         this.a = a;
         this.b = b;
     }
 
-    int getPerimeter() {
+    double getPerimeter() {
         return this.a + this.b;
     }
 
-    int getArea() {
+    double getArea() {
         return this.a * this.b;
     }
 }
