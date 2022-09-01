@@ -1,21 +1,26 @@
-import java.util.Locale;
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("What shape you want to be drawn?");
-        String desiredShape = scanner.nextLine();
-        Shape shape;
+        ArrayList<Shape> arrayList = new ArrayList<>();
+        ArrayList<Cube> arrayList1 = new ArrayList<>();
 
-        if(desiredShape.toLowerCase(Locale.ROOT).equals("triangle")) {
-            shape = new Triangle();
-        }
-        else {
-            shape = new Square(50, 50);
-        }
+        Cube cube = new Cube(50, 50, 50);
 
-        shape.draw();
+        arrayList.add(cube);
+
+        arrayList.get(0).draw();
+
+        System.out.println(arrayList.get(0).getClass());
+
+        Shape cube2 = new Cube(64, 64, 64);
+
+        System.out.println(cube2.getClass());
+
+        arrayList1.add((Cube) cube2);   // Shape object can't be added to Cube ArrayList, but it can be if we downcast it
+                                        // to Cube, as Cube is child of Shape
+
+
     }
 }
